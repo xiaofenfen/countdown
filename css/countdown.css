@@ -1,4 +1,8 @@
-#time{
+#txt,p{
+	font-size: 50px;
+}
+
+#conday,#conhour,#conminute,#consecond{
 	font-size: 128px;
 	font-weight: bold;
 	text-align: center;
