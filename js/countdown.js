@@ -1,6 +1,6 @@
 //计算天数
 var t1 = new Date();
-var t2 = new Date("2016/6/15 00:00:00");
+var t2 = new Date("2016/6/15 12:00:00");
 var a = (t2.getTime() - t1.getTime());
 a = (a/1000/60/60);
 
