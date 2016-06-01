@@ -23,7 +23,7 @@ function changeDay()
 	day--;
 }
 daytimer = setTimeout(function(){changeDay();},1000);
-	//倒计时小时
+//倒计时小时
 var hour = hourduration;
 var hourtimer;
 function changeHour()
