@@ -1,73 +1,73 @@
-//计算天数
-var t1 = new Date();
-var t2 = new Date("2016/6/15 12:00:00");
-var a = (t2.getTime() - t1.getTime());
-a = (a/1000/60/60);
-
+var today = new Date();
+var d = today.getDate();
+var h = today.getHours();
+var m = today.getMinutes();
+var s = today.getSeconds();
+dayduration = (15-d);
+hourduration = (23-h);
+minuteduration = (59-m);
+secondduration = (59-s);
 //倒计时天数
-var day = a;
-var timer;
-function changed()
+var day = dayduration;
+var daytimer;
+function changeDay()
 {
-	day--;
 	if (day > -1) {
 		document.getElementById("conday").innerHTML = day;
-		timer = setTimeout('changed()',1000);
+		timer = setTimeout(function(){changeDay();},86400000);
 	}
 	else
 	{
-		clearTimeout(timer);
+		clearTimeout(daytimer);
 	}
+	day--;
 }
-timer = setTimeout('changed()',1000);
-
-//倒计时小时
-var hour = 100;
-var timer;
-function changeh()
+daytimer = setTimeout(function(){changeDay();},1000);
+	//倒计时小时
+var hour = hourduration;
+var hourtimer;
+function changeHour()
 {
-	hour--;
 	if (hour > -1) {
 		document.getElementById("conhour").innerHTML = hour;
-		timer = setTimeout('changeh()',1000);
+		hourtimer = setTimeout(function(){changeHour();},3600000);
 	}
 	else
 	{
-		clearTimeout(timer);
+		clearTimeout(hourtimer);
 	}
+	hour--;
 }
-timer = setTimeout('changeh()',1000);
-
+hourtimer = setTimeout(function(){changeHour();},1000);
 //倒计时分钟
-var minute = 100;
-var timer;
-function changem()
+var minute = minuteduration;
+var minutetimer;
+function changeMinute()
 {
-	minute--;
 	if (minute > -1) {
 		document.getElementById("conminute").innerHTML = minute;
-		timer = setTimeout('changem()',1000);
+		minutetimer = setTimeout(function(){changeMinute();},60000);
 	}
 	else
 	{
-		clearTimeout(timer);
+		clearTimeout(ninutetimer);
 	}
+	minute--;
 }
-timer = setTimeout('changem()',1000);
-
+minutetimer = setTimeout(function(){changeMinute();},1000);
 //倒计时秒
-var second = 100;
-var timer;
-function changes()
+var second = secondduration;
+var secondtimer;
+function changeSecond()
 {
-	second--;
 	if (second > -1) {
 		document.getElementById("consecond").innerHTML = second;
-		timer = setTimeout('changes()',1000);
+		secondtimer = setTimeout(function(){changeSecond();},1000);
 	}
 	else
 	{
-		clearTimeout(timer);
+		clearTimeout(secondtimer);
 	}
+	second--;
 }
-timer = setTimeout('changes()',1000);
+secondtimer = setTimeout(function(){changeSecond();},1000);
