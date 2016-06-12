@@ -1,12 +1,10 @@
 var today = new Date();
-var d = today.getDate();
-var h = today.getHours();
-var m = today.getMinutes();
-var s = today.getSeconds();
-dayduration = (15-d);
-hourduration = (23-h);
-minuteduration = (59-m);
-secondduration = (59-s);
+var objectTime = new Date("00:00:00 6/15/2016");
+var duration = objectTime.getTime() - today.getTime();
+var dayduration = Math.floor(duration / 1000 / 60 / 60 / 24);
+var hourduration = Math.floor(duration / 1000 /60 / 60) - dayduration * 24;
+var minuteduration = Math.floor(duration / 1000 /60) - dayduration * 24 * 60 - hourduration * 60;
+var secondduration = Math.floor(duration / 1000) - dayduration * 24 * 60 *60 - hourduration * 60 * 60 - minuteduration * 60;
 //倒计时天数
 var day = dayduration;
 var daytimer;
