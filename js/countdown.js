@@ -1,7 +1,6 @@
 var today = new Date();
 var deadline = new Date("00:00:00 6/28/2016");
 var duration = deadline.getTime() - today.getTime();
-
 //计算出相差天数
 var dayduration = Math.floor(duration / 1000 / 60 / 60 / 24);
 //计算出小时数
