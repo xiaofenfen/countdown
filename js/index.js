@@ -10,46 +10,46 @@ function startTime(){
 			m = checkTime(m);
 			s = checkTime(s);
 			document.getElementById('txt').innerHTML = "现在时间：" + y + "年" + o  + "月" + d + "日" + h + ":" + m + ":" + s ;
-			t = setTimeout('startTime()',1000);		
-      var deadline = new Date("00:00:00 6/28/2016");
-      var duration = deadline.getTime() - today.getTime();
-      //计算出相差天数
-      var dayduration = Math.floor(duration / 1000 / 60 / 60 / 24);
-      //计算出小时数
-      var leave1 = duration % (1000 * 60 * 60 * 24);//计算天数后剩余的毫秒数
-      var hourduration = Math.floor(leave1 / 1000 / 60 / 60);
-      //计算相差分钟数
-      var leave2 = leave1 % (1000 * 60 * 60)//计算小时数后剩余的毫秒数
-      var minuteduration = Math.floor(leave2 / 1000 / 60);
-      //计算相差秒数
-      var leave3 = leave2 % (1000 * 60);//计算分钟后剩余秒数
-      var secondduration = Math.floor(leave3 / 1000); 
-      //倒计时天数
-      var day = dayduration;
-      document.getElementById("conday").innerHTML = day;
-      //倒计时小时
-      var hour = hourduration;
-      document.getElementById("conhour").innerHTML = hour;
-      //倒计时分钟
-      var minute = minuteduration;
-      document.getElementById("conminute").innerHTML = minute;
-      //倒计时秒
-      var second = secondduration;
-      var secondtimer;
-      function changeSecond()
-      {
-	      if (second > -1) {
-		      document.getElementById("consecond").innerHTML = second;
-		      secondtimer = setTimeout(function(){changeSecond();},1000);
-	      }
-	      else
-	      {
-		     clearTimeout(secondtimer);
-	      }
-	      second--;
-      }
-      secondtimer = setTimeout(function(){changeSecond();},1000);
-		}
+			t = setTimeout('startTime()',1000);	
+			var deadline = new Date("00:00:00 10/1/2016");
+			var duration = deadline.getTime() - today.getTime();
+			//计算出相差天数
+			var dayduration = Math.floor(duration / 1000 / 60 / 60 / 24);
+			//计算出小时数
+			var leave1 = duration % (1000 * 60 * 60 * 24);//计算天数后剩余的毫秒数
+			var hourduration = Math.floor(leave1 / 1000 / 60 / 60);
+			//计算相差分钟数
+			var leave2 = leave1 % (1000 * 60 * 60)//计算小时数后剩余的毫秒数
+			var minuteduration = Math.floor(leave2 / 1000 / 60);
+			//计算相差秒数
+			var leave3 = leave2 % (1000 * 60);//计算分钟后剩余秒数
+			var secondduration = Math.floor(leave3 / 1000); 
+			//倒计时天数
+			var day = dayduration;
+			document.getElementById("conday").innerHTML = day;
+			//倒计时小时
+			var hour = hourduration;
+			document.getElementById("conhour").innerHTML = hour;
+			//倒计时分钟
+			var minute = minuteduration;
+			document.getElementById("conminute").innerHTML = minute;
+			//倒计时秒
+			var second = secondduration;
+			var secondtimer;
+			function changeSecond()
+				{
+				if (second > -1) {
+					document.getElementById("consecond").innerHTML = second;
+					secondtimer = setTimeout(function(){changeSecond();},1000);
+				}
+				else
+				{
+					clearTimeout(secondtimer);
+				}
+				second--;
+				}
+				secondtimer = setTimeout(function(){changeSecond();},1000);
+				}
 		function checkTime(i){
 		if (i<10) {
 			i = "0" + i}
