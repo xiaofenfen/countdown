@@ -1,7 +1,7 @@
-#txt,p{
+#txt, p{
   font-size: 50px;
 }
-#con-day,#con-hour,#con-minute,#con-second{
+.time{
   font-size: 128px;
   font-weight: bold;
   text-align: center;
