@@ -46,7 +46,7 @@ function startTime() {
         clearTimeout(secondTimer);
       }
     second--;
-	}
+  }
   secondTimer = setTimeout(function() {changeSecond();},1000);
 }
 
