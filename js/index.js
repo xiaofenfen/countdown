@@ -12,7 +12,7 @@ function startTime() {
   document.getElementById('txt').innerHTML = "现在时间：" + y + "年" + o  + "月" + d + "日" + h + ":" + m + ":" + s;
   t = setTimeout('startTime()',1000);	
 
-  var deadline = new Date("00:00:00 10/1/2016");
+  var deadline = new Date("00:00:00 1/28/2017");
   var duration = deadline.getTime() - today.getTime();
   // 计算出相差天数
   var dayDuration = Math.floor(duration / 1000 / 60 / 60 / 24);
@@ -37,7 +37,6 @@ function startTime() {
   // 倒计时秒
   var second = secondDuration;
   var secondTimer;
-
   function changeSecond() {
     if (second > -1) {
       document.getElementById("con-second").innerHTML = second;
