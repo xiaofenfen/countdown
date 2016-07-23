@@ -6,9 +6,9 @@
 }
 .con-time{
   position:absolute;
-  top:50%；
+  top:50%;
   left:50%; 
-  transform:translate;
+  transform:translate(-50%,-50%);
 }
 #txt, p{
   font-size:50px;
