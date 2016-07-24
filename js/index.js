@@ -9,7 +9,7 @@ function startTime() {
   // add a zero in front of numbers<10
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('txt').innerHTML = "现在时间：" + y + "年" + o  + "月" + d + "日" + h + ":" + m + ":" + s;
+  document.getElementById('current-time').innerHTML = "现在时间：" + y + "年" + o  + "月" + d + "日 " + h + ":" + m + ":" + s;
   t = setTimeout('startTime()',1000);	
 
   var deadline = new Date("00:00:00 1/28/2017");
