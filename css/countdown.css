@@ -29,7 +29,7 @@
   left: 50%; 
   transform: translate(-50%,-50%);
 }
-#txt, p{
+p {
   font-size: 50px;
   color: #999;
 }
